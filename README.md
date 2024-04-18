@@ -1,9 +1,12 @@
 # 📚 Scheduling Manufacturing Systems 📚
 
-This lecture has been taken during the master's education at Munich Technical University.
+* <p>First of all, this repository is about the lecture that was given during my master's education at Munich Technical University.</p>
 
-<p>This repository serves as a comprehensive resource for the Scheduling Manufacturing Systems Lecture, utilizing Python as the primary programming language along with the Gurobi Optimizer. Its purpose is to study and analyze manufacturing systems efficiently, being a resource for the lecture. By integrating the powerful optimization capabilities of Gurobi with Python, learners can explore various scheduling techniques and gain insights into optimizing manufacturing processes. Through a collection of Python scripts, libraries, and documentation, users can delve deeper into the complexities of manufacturing systems, and produce a solution to tackle complex challenges in production scheduling by using both Python and Gurobi Optimizer to. Whether for academic learning or practical application, this repository aims to empower users with the examples and explanations they need to cover and be a resource for scheduling manufacturing systems.</p>
+* <p>The repository serves as a comprehensive resource for the Scheduling Manufacturing Systems Lecture, utilizing Python as the primary programming language along with the Gurobi Optimizer for mathematical optimization. Its purpose is to study and analyze manufacturing systems efficiently, being a resource for the lecture.</p>
 
+* <p>By integrating the powerful optimization capabilities of Gurobi with Python, learners can explore various scheduling techniques and gain insights into optimizing manufacturing processes. Through a collection of Python scripts, libraries, and documentation, users can delve deeper into the complexities of manufacturing systems, and produce a solution to tackle complex challenges in production scheduling by using both Python and Gurobi Optimizer to.</p>
+
+* <p>Overall, Whether for academic learning or practical application, this repository aims to empower users with the examples and explanations they need to cover and be a resource for scheduling manufacturing systems.</p>
 
 ## Table of Contents 📝
 - [Getting Started](#getting-started)
