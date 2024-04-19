@@ -17,6 +17,11 @@
   - [String, Print, Type And Comment](#string-print-type-and-comment)
   - [Integers and Floats](#integers-and-floats)
   - [Variable Assignment And Mathematical Operations](#variable-assignment-and-mathematical-operations)
+  - [Type Casting And Concatenation](#type-casting-and-concatenation)
+  - [List](#list)
+  - [Dictionaries](#dictionaries)
+  - [Sets and Tuples](#sets-and-tuples)
+  - [Loops and Branching](#loops-and-branching)
 - [Usage & Contributing](#usage--contributing)
 - [License](#license)
 - [Resources](#resources)
@@ -113,6 +118,360 @@ Float example: 3.14
 
 ### Variable Assignment And Mathematical Operations
 
+<ul>
+  <li>Variables are identifiers that refer to a specific value.</li>
+  <li>You can assign values to variables using the assignment operator (=).</li>
+  <li>In addition to common arithmetic operations, such as addition and subtraction, there's another useful operation called the modulo operator. It calculates the remainder when dividing two positive integers, which is frequently used in programming.</li>
+</ul>
+
+~~~
+# Variable assignment
+x = 10
+
+# Assigning a value to a variable
+y = 5
+
+# Modulo operator example
+result = 10 % 3  # This will return 1 since 10 divided by 3 leaves a remainder of 1
+~~~
+
+
+### Type Casting And Concatenation
+
+<ul>
+  <li>You can change the type of a variable to another type using specific functions.</li>
+  <li>Concatenation refers to the process of joining multiple strings together.</li>
+  <li>Type casting and concatenation are valuable for preventing type conflicts and formatting output.</li>
+</ul>
+
+~~~
+# Type conversion example
+x = "10"
+y = int(x)  # Convert x from string to integer
+
+# String concatenation example
+first_name = "John"
+last_name = "Doe"
+full_name = first_name + " " + last_name
+
+# Type casting and concatenation example
+num = 10
+text = "The number is: " + str(num)  # Convert num to string for concatenation
+print(text)
+~~~~
+
+
+### List
+
+<ul>
+  <li>Lists are groupings of various types of variables or values.</li>
+  <li>The elements in a list are ordered, can be modified, and allow duplicate values.</li>
+  <li>Lists can include sublists as elements, creating lists with multiple levels of nesting which are also called multidimensional lists.</li>
+</ul>
+
+~~~
+# List example
+my_list = [1, "apple", True, 3.14]
+
+# List properties example
+my_list = [1, 2, 3, 4, 1, 2]
+
+# Multidimensional list example
+multidimensional_list = [[1, 2, 3], ["a", "b", "c"], [True, False]]
+~~~
+
+<br>
+
+<p><b>Helpful operations for lists:</b></p>
+
+<ol type="1">
+  <li><b>list.append(element):</b> Add an item to the end of a list</li>
+  <li><b>list.pop(i):</b> Remove and retrieve the (i + 1)th element from the list</li>
+  <li><b>print(list[i]): </b> Print the (i + 1)th element of the list</li>
+  <li><b>len(list): </b> Determine the length of a list</li>
+  <li><b>element in list: </b> Check if an element is present in the list; returns True if found, False otherwise</li>
+  <li><b>list.reverse(): </b> Print the list in reverse order </li>
+  <li><b>list.sort(): </b> Arrange the list elements in ascending order</li>
+</ol>
+
+> **_NOTE:_** In Python, list indexing starts from 0
+
+ ~~~
+# List functions demonstration
+my_list = [1, 2, 3]
+
+# list.append() example
+my_list.append(4)
+
+# list.pop() example
+popped_item = my_list.pop(1)
+
+# Print list element example
+print(my_list[0])
+
+# len() example
+list_length = len(my_list)
+
+# Check if element is in list example
+is_present = 4 in my_list
+
+# list.reverse() example
+my_list.reverse()
+
+# list.sort() example
+my_list.sort()
+  ~~~
+
+<br>
+
+<p><b>Slicing allows extracting a portion of a list or string for display.</b></p>
+<ul>
+  <li>To perform slicing, use the colon notation inside square brackets following the list name.</li>
+  <li>The slicing syntax appears as follows: <b>list[start:stop:step].</b></li>
+  <li>Practice: Given the list numbers = [99, 20, 56, 10, 5], arrange it in ascending order.</li>
+</ul>
+
+~~~
+# Slicing example with a list
+numbers = [1, 2, 3, 4, 5]
+sliced_numbers = numbers[1:4]
+print(sliced_numbers)  # Output: [2, 3, 4]
+
+# Slicing syntax example
+numbers = [1, 2, 3, 4, 5]
+sliced_numbers = numbers[1:4]
+
+# Slicing syntax explanation
+numbers = [1, 2, 3, 4, 5]
+sliced_numbers = numbers[1:4:2]
+
+# Sorting a list exercise
+numbers = [99, 20, 56, 10, 5]
+numbers.sort()
+print(numbers)  # Output: [5, 10, 20, 56, 99]
+~~~
+
+### Dictionaries
+
+<p><b>Dictionaries are collections that store key:value pairs.</b></p>
+
+<ul>
+  <li>Dictionaries are structured collections that maintain order, support modification, and do not permit duplicate keys.</li>
+  <li>Unlike lists, dictionary elements are identified by their keys rather than numerical indices.</li>
+  <li>Accessing dictionary elements resembles accessing list elements, but you use square brackets with the key instead of an index <b>(dictionary[key]).</b></li>
+</ul>
+
+~~~
+# Dictionary example
+my_dict = {"name": "John", "age": 30, "city": "New York"}
+
+# Dictionary properties example
+my_dict = {"name": "John", "age": 30, "city": "New York"}
+
+# Accessing dictionary elements example
+print(my_dict["name"])
+
+# Accessing dictionary elements example
+print(my_dict["age"])
+~~~
+<br>
+
+<p><b>Useful dictionaries functions (rather similar to lists):</b></p>
+<ol type="*">
+  <li><b>print(dictionary(key]):</b> Display the value associated with a specific key</li>
+  <li><b>dictionary.pop(key):</b> Eliminate and retrieve the value associated with a given key</li>
+  <li><b>len(dictionary):</b> Determine the number of key-value pairs in a dictionary or It means that the length of a dictionary.</li>
+  <li><b>key in dictionary:</b> Check if a key exists in the dictionary; returns True if found, False otherwise.</li>
+</ol>
+
+~~~
+# Dictionary functions demonstration
+my_dict = {"name": "John", "age": 30, "city": "New York"}
+
+# print(dictionary[key]) example
+print(my_dict["name"])
+
+# dictionary.pop(key) example
+removed_value = my_dict.pop("age")
+
+# len(dictionary) example
+dict_length = len(my_dict)
+
+# key in dictionary example
+is_present = "name" in my_dict
+~~~
+
+### Sets and Tuples
+
+<ul>
+  <li>Sets are unordered, unchangeable and unable to be modified or indexed. Nevertheless, elements can be added to or removed from sets.</li>
+  <li>Tuples are ordered collections of elements that are immutable; neither can elements be modified by index nor new elements be added to a tuple.</li>
+</ul>
+
+~~~
+# Set example
+my_set = {1, 2, 3}
+
+# Tuple example
+my_tuple = (1, 2, 3)
+~~~
+<br>
+<p>After being converted to a variable of type set, notice that the list_set no longer contains any repeating elements.</p>
+
+~~~
+# Original list with duplicate elements
+original_list = [1, 2, 3, 1, 2, 4, 5]
+
+# Convert the list to a set
+list_set = set(original_list)
+
+# Display the original list and the set
+print("Original list:", original_list)
+print("Set without duplicates:", list_set)
+~~~
+___
+
+~~~
+Original list: [1, 2, 3, 1, 2, 4, 5]
+Set without duplicates: {1, 2, 3, 4, 5}
+~~~
+
+>  **_NOTE:_** When we want to move around items that we do not wish to change, we can utilize tuples.
+
+### Loops and Branching
+
+<ul>
+  <li>Branching directs code execution paths according to the evaluation of one or more conditions.</li>
+  <li>Branching employs if statements, which can incorporate elif and else statements. This structure dictates: 'If condition_1 is met, execute action_1; otherwise, if condition_2 is met, execute action_2; if neither condition holds, execute action_3'.</li>
+  <li>An if statement can combine multiple conditions using the 'and' and 'or' operators</li>
+  <li>Nested if statements, where one if statement is contained within another, execute only if both conditions are met.</li>
+  <li>If statements utilize comparisons and Booleans. Conditions determining branching paths rely on comparison operators, yielding Boolean outcomes.</li>
+  <li>Python employs comparison operators such as '==', '>=', and '<='.</li>
+  <li>Booleans denote either True or False. Variables holding Boolean values are assigned either True or False.</li>
+</ul>
+
+~~~
+# Branching example
+x = 10
+if x > 5:
+    print("x is greater than 5")
+
+# If-elif-else example
+x = 10
+if x > 15:
+    print("x is greater than 15")
+elif x > 5:
+    print("x is greater than 5 but less than or equal to 15")
+else:
+    print("x is less than or equal to 5")
+
+# Combining conditions example
+x = 10
+if x > 5 and x < 15:
+    print("x is between 5 and 15")
+
+# Nested if example
+x = 10
+if x > 5:
+    if x < 15:
+        print("x is between 5 and 15")
+
+# Boolean conditions example
+x = 10
+y = 20
+if x == 10 and y >= 15:
+    print("Both conditions are met")
+
+# Boolean variables example
+is_raining = False
+has_umbrella = True
+if is_raining and has_umbrella:
+    print("Bring your umbrella!")
+~~~
+
+<br>
+
+<ul>
+  <li>Loops repeat a set of instructions for a specified number of times.</li>
+  <li>There are two main types of loops: while loops and for loops.</li>
+  <li>While loops execute instructions repeatedly as long as a specified condition remains true. It's called a 'loop' because the code block is iterated until the condition becomes false.</li>
+  <li>For loops execute instructions for a predetermined number of iterations, acting as iterators to traverse the items of a sequence or any iterable object.</li>
+  <li>Loops are utilized to iterate through collections like lists and dictionaries.</li>
+</ul>
+
+~~~
+# Loop example
+for i in range(5):
+    print("Iteration:", i)
+
+# While loop example
+x = 0
+while x < 5:
+    print("x is less than 5")
+    x += 1
+
+# While loop example
+x = 0
+while x < 5:
+    print("x is less than 5")
+    x += 1
+
+# For loop example
+for i in range(5):
+    print("Iteration:", i)
+
+# Iterating over a list example
+my_list = [1, 2, 3, 4, 5]
+for item in my_list:
+    print("Item:", item)
+~~~
+<br>
+
+<ul>
+  <li>Before proceeding to for loops, let's discuss ranges.</li>
+  <li>The range() function generates a sequence starting from 0 and ending before a specified number.</li>
+  <li>Typically, the range function is expressed as: range(start, stop, step).</li>
+  <li>By default, ranges commence at 0 and increment by 1.</li>
+</ul>
+
+~~~
+# Range example
+for i in range(5):
+    print("Iteration:", i)
+
+# Range function example
+for i in range(5):
+    print("Iteration:", i)
+
+# Range function with custom start, stop, and step
+for i in range(1, 10, 2):
+    print("Iteration:", i)
+
+# Default range behavior example
+for i in range(5):
+    print("Iteration:", i)
+~~~
+<br>
+
+<p>Using a for loop:</p>
+
+~~~
+# Using a for loop
+total_sum = 0
+for i in range(1, 101):
+    total_sum += i
+print("Sum using for loop:", total_sum)
+~~~
+
+<br>
+<p>Using the Gauss Sum formula:</p>
+
+~~~
+# Using Gauss Sum formula
+n = 100
+gauss_sum = n * (n + 1) // 2
+print("Sum using Gauss Sum formula:", gauss_sum)
+~~~
 
 
 ## Usage & Contributing
