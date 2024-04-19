@@ -14,14 +14,21 @@
   - [Installation](#installation)
 - [Python](#python)
   - [Introduction](#introdution)
-  - [String, Print, Type And Comment](#string-print-type-and-comment)
-  - [Integers and Floats](#integers-and-floats)
-  - [Variable Assignment And Mathematical Operations](#variable-assignment-and-mathematical-operations)
-  - [Type Casting And Concatenation](#type-casting-and-concatenation)
-  - [List](#list)
-  - [Dictionaries](#dictionaries)
-  - [Sets and Tuples](#sets-and-tuples)
-  - [Loops and Branching](#loops-and-branching)
+  - [Chapter 1](#chapter-1) 
+    - [String, Print, Type And Comment](#string-print-type-and-comment)
+    - [Integers and Floats](#integers-and-floats)
+    - [Variable Assignment And Mathematical Operations](#variable-assignment-and-mathematical-operations)
+    - [Type Casting And Concatenation](#type-casting-and-concatenation)
+    - [List](#list)
+    - [Dictionaries](#dictionaries)
+    - [Sets and Tuples](#sets-and-tuples)
+    - [Loops and Branching](#loops-and-branching)
+  - [Chapter 2](#chapter-2)
+    - [Functions and Packages](#functions-and-packages)
+      - [Function Definition](#function-definition)
+      - [Function Arguments and Default Values](#function-arguments-and-default-values)
+      - [NumPy](#numpy)
+      - [Pandas](#pandas)
 - [Usage & Contributing](#usage--contributing)
 - [License](#license)
 - [Resources](#resources)
@@ -68,7 +75,9 @@
 
 <a href="https://medium.com/@shawnren527/learn-about-python-3-data-types-numbers-and-strings-76c75a917c9b">Resource by Shawn Ren - Medium Page - Learn about Python 3 data types</a>
 
-### String, Print, Type And Comment
+### Chapter 1
+
+#### String, Print, Type And Comment
 
 <ul>
   <li>Character collections known as strings are used to depict a character sequence.</li>
@@ -94,7 +103,7 @@ Hello, world!
 <class 'str'>
 ~~~
 
-### Integers And Floats
+#### Integers And Floats
 
 <ul>
   <li>Python has two built-in methods for representing numbers: integer and float.</li>
@@ -116,7 +125,7 @@ Integer example: 10
 Float example: 3.14
 ~~~
 
-### Variable Assignment And Mathematical Operations
+#### Variable Assignment And Mathematical Operations
 
 <ul>
   <li>Variables are identifiers that refer to a specific value.</li>
@@ -136,7 +145,7 @@ result = 10 % 3  # This will return 1 since 10 divided by 3 leaves a remainder o
 ~~~
 
 
-### Type Casting And Concatenation
+#### Type Casting And Concatenation
 
 <ul>
   <li>You can change the type of a variable to another type using specific functions.</li>
@@ -161,7 +170,7 @@ print(text)
 ~~~~
 
 
-### List
+#### List
 
 <ul>
   <li>Lists are groupings of various types of variables or values.</li>
@@ -251,7 +260,7 @@ numbers.sort()
 print(numbers)  # Output: [5, 10, 20, 56, 99]
 ~~~
 
-### Dictionaries
+#### Dictionaries
 
 <p><b>Dictionaries are collections that store key:value pairs.</b></p>
 
@@ -301,7 +310,7 @@ dict_length = len(my_dict)
 is_present = "name" in my_dict
 ~~~
 
-### Sets and Tuples
+#### Sets and Tuples
 
 <ul>
   <li>Sets are unordered, unchangeable and unable to be modified or indexed. Nevertheless, elements can be added to or removed from sets.</li>
@@ -338,7 +347,7 @@ Set without duplicates: {1, 2, 3, 4, 5}
 
 >  **_NOTE:_** When we want to move around items that we do not wish to change, we can utilize tuples.
 
-### Loops and Branching
+#### Loops and Branching
 
 <ul>
   <li>Branching directs code execution paths according to the evaluation of one or more conditions.</li>
@@ -473,6 +482,694 @@ gauss_sum = n * (n + 1) // 2
 print("Sum using Gauss Sum formula:", gauss_sum)
 ~~~
 
+### Chapter 2
+
+#### Functions and Packages
+
+##### Function Definition
+
+<ul>
+  <li>Functions are sections of code that are executed only when they are specifically requested or called.</li>
+  <li>Benefits of functions:</li>
+  <ul>
+    <li>Enhance code clarity and comprehension.</li>
+    <li>Enable code reusability within the same script or across various programs.</li>
+  </ul>
+</ul>
+
+~~~
+# Define a simple function
+def greet():
+    print("Hello, world!")
+
+# Call the function to execute its code block
+greet()
+
+# Functions enhance code readability and can be reused multiple times
+# For example:
+greet()  # This call executes the greet function again
+~~~
+___
+~~~
+Hello, world!
+~~~
+
+> **_NOTE_** The advantages of readability and code reuse.
+
+##### Function Arguments and Default Values
+
+<ul>
+  <li>In the previous example, the function didn't require any input. However, in certain situations, functions need input information, which we call arguments.</li>
+  <li>Arguments are specified within the parentheses after the function name and are separated by commas.</li>
+  <li>Arguments can have values of various types, but it's crucial to provide the correct types when calling functions.</li>
+  <li>When calling functions, arguments are provided within the parentheses in the format <b>argument_Name = argument_Value</b>. Alternatively, only values can be specified in the parentheses, but in that case, the arguments must be in the same order as defined in the function.</li>
+</ul>
+
+~~~
+# Define a function with input arguments
+def greet(name, age):
+    print(f"Hello, {name}! You are {age} years old.")
+
+# Call the function with arguments specified by name
+greet(name="Alice", age=30)
+
+# Call the function with arguments specified by position
+greet("Bob", 25)
+~~~
+___
+~~~
+Hello, Alice! You are 30 years old.
+Hello, Bob! You are 25 years old.
+~~~
+
+> **_NOTE_** Providing arguments by name enhances code readability and reduces the risk of errors when calling functions.
+
+<ul>
+  <li>Functions can include arguments with default values, which may or may not be provided when calling the function.</li>
+  <li>Arguments with default values must be placed at the end of the parameter list.</li>
+</ul>
+
+~~~
+# Define a function with an argument having a default value
+def greet(name, message="Hello"):
+    print(f"{message}, {name}!")
+
+# Call the function without specifying the optional argument
+greet("Alice")
+
+# Call the function and specify the optional argument
+greet("Bob", "Hi")
+~~~
+___
+~~~
+Hello, Alice!
+Hi, Bob!
+~~~
+
+> **_NOTE_** This demonstrates how functions can have arguments with default values, providing flexibility when calling the function.
+
+<ul>
+  <li>Variables created and utilized within a function (local variables) cannot be accessed outside of that function.</li>
+  <li>Variables defined in the main program (outside of any function) can be accessed within a function using the keyword <b>global</b> (although it's not strictly necessary, using <b>global</b> makes it clearer that the variable is being accessed from outside the function).</li>
+</ul>
+
+~~~
+# Define a global variable
+global_var = "I'm a global variable"
+
+# Define a function that uses a global variable
+def func():
+    # Access the global variable inside the function
+    print("Inside the function:", global_var)
+
+# Call the function
+func()
+
+# Trying to access the local variable outside the function will result in an error
+# Uncommenting the line below will raise a NameError
+# print("Outside the function:", local_var)
+~~~
+___
+~~~
+Inside the function: I'm a global variable
+~~~
+
+> **_NOTE_** Attempting to access a local variable defined within the function outside of it will result in an error, as local variables are not visible outside of their defining scope.
+
+##### NumPy
+
+<ul>
+  <li>NumPy is a Python library designed for array manipulation, linear algebra operations, Fourier transforms, and matrix computations.</li>
+  <li>NumPy is particularly valuable because its array objects are more efficient than native Python lists.</li>
+  <li>To utilize NumPy, it must first be installed. In integrated development environments (IDEs), installation is typically achieved by executing the command pip install numpy in the terminal. Subsequently, it must be imported into the .py file using the import numpy command. Note: In Google Colab, NumPy is pre-installed, so only importing is necessary.</li>
+  <li>Python allows us to import libraries using aliases, enabling the use of the library in the script without typing its full name every time. For NumPy, the commonly used alias is np.</li>
+</ul>
+
+~~~
+# Importing NumPy with the np alias
+import numpy as np
+
+# Creating a NumPy array
+arr = np.array([1, 2, 3, 4, 5])
+
+# Printing the array
+print(arr)
+~~~
+___
+~~~
+[1 2 3 4 5]
+~~~
+
+> **_NOTE_** NumPy is imported using the alias np. Then, a NumPy array is created and printed. Using the alias np allows us to reference NumPy functions and objects more concisely throughout the script.
+
+<ul>
+  <li>The NumPy library's array object is known as ndarray. Arrays can be generated using the array function provided by the NumPy package.</li>
+  <li>NumPy arrays can have various dimensions. A 0-D array represents a scalar value, a 1-D array represents a vector, a 2-D array represents a matrix, a 3-D array represents a collection of 2-D arrays, and so on. The dimensionality of an array can be determined using the ndim attribute of the array.</li>
+</ul>
+
+~~~
+import numpy as np
+
+# Creating different-dimensional NumPy arrays
+scalar_arr = np.array(5)  # 0-D array (scalar)
+vector_arr = np.array([1, 2, 3])  # 1-D array (vector)
+matrix_arr = np.array([[1, 2, 3], [4, 5, 6]])  # 2-D array (matrix)
+collection_arr = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])  # 3-D array (collection of 2-D arrays)
+
+# Checking the dimensions of the arrays
+print("Dimension of scalar_arr:", scalar_arr.ndim)
+print("Dimension of vector_arr:", vector_arr.ndim)
+print("Dimension of matrix_arr:", matrix_arr.ndim)
+print("Dimension of collection_arr:", collection_arr.ndim)
+~~~
+___
+~~~
+Dimension of scalar_arr: 0
+Dimension of vector_arr: 1
+Dimension of matrix_arr: 2
+Dimension of collection_arr: 3
+~~~
+
+> **_NOTE_** Various NumPy arrays of different dimensions are created using the array function. Then, the dimensionality of each array is determined using the ndim attribute and printed. This demonstrates how NumPy arrays can represent scalars, vectors, matrices, and higher-dimensional structures.
+
+<ul>
+  <li>In NumPy ndarrays, indexing begins at 0, similar to lists. Slicing operations function in the same manner.</li>
+  <li>Ndarrays offer a valuable attribute called shape, which provides the count of elements along each dimension. The shape attribute returns a tuple where each element represents the number of elements in the respective dimension.</li>
+  <li>Ndarrays can be reshaped using the reshape() function by specifying the desired shape as an argument.</li>
+</ul>
+
+~~~
+import numpy as np
+
+# Creating a NumPy array
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+# Accessing elements using indexing and slicing
+print("Element at index (0, 1):", arr[0, 1])  # Output: 2
+print("First row:", arr[0, :])  # Output: [1 2 3]
+print("Last column:", arr[:, -1])  # Output: [3 6]
+
+# Checking the shape of the array
+print("Shape of the array:", arr.shape)  # Output: (2, 3)
+
+# Reshaping the array
+reshaped_arr = arr.reshape(3, 2)
+print("Reshaped array:")
+print(reshaped_arr)
+~~~
+___
+~~~
+Element at index (0, 1): 2
+First row: [1 2 3]
+Last column: [3 6]
+Shape of the array: (2, 3)
+Reshaped array:
+[[1 2]
+ [3 4]
+ [5 6]]
+Element at index (0, 1): 2
+First row: [1 2 3]
+Last column: [3 6]
+Shape of the array: (2, 3)
+Reshaped array:
+[[1 2]
+ [3 4]
+ [5 6]]
+~~~
+
+> **_NOTE_** a NumPy array is created and accessed using indexing and slicing operations. The shape attribute is then used to determine the dimensions of the array. Finally, the array is reshaped using the reshape() function to convert it from a 2x3 array to a 3x2 array.
+
+<ul>
+  <li>Lists and ndarrays exhibit differences in how mathematical operations are performed on them.</li>
+  <li>1-D arrays are treated as vectors, and mathematical operations are applied element-wise.</li>
+  <li>A comparison between 1-D lists and arrays is presented below.</li>
+</ul>
+
+~~~
+import numpy as np
+
+# Define a 1-D list and a 1-D array
+list_1d = [1, 2, 3, 4, 5]
+array_1d = np.array([1, 2, 3, 4, 5])
+
+# Perform a mathematical operation (multiplication) on the list and the array
+list_result = [x * 2 for x in list_1d]
+array_result = array_1d * 2
+
+# Print the results
+print("Result of multiplying the list by 2:", list_result)
+print("Result of multiplying the array by 2:", array_result)
+~~~
+___
+~~~
+Result of multiplying the list by 2: [2, 4, 6, 8, 10]
+Result of multiplying the array by 2: [ 2  4  6  8 10]
+~~~
+
+> **_NOTE_** A 1-D list (list_1d) and a 1-D array (array_1d) are defined. Then, a mathematical operation (multiplication by 2) is performed on both the list and the array. The results are printed, illustrating how the mathematical operation is applied differently to the list (element-wise multiplication) and the array (each element is multiplied by 2).
+
+<ul>
+  <li>Operations such as logarithm, square root, and exponentiation can be applied to ndarrays in a similar manner, without the need to iterate through all the elements of the array.</li>
+</ul>
+
+~~~
+import numpy as np
+
+# Create a NumPy array
+arr = np.array([1, 4, 9, 16, 25])
+
+# Apply logarithm, square root, and exponentiation operations to the array
+log_arr = np.log(arr)
+sqrt_arr = np.sqrt(arr)
+exp_arr = np.exp(arr)
+
+# Print the results
+print("Logarithm of the array:", log_arr)
+print("Square root of the array:", sqrt_arr)
+print("Exponential of the array:", exp_arr)
+~~~
+___
+~~~
+Logarithm of the array: [0.         1.38629436 2.19722458 2.77258872 3.21887582]
+Square root of the array: [1. 2. 3. 4. 5.]
+Exponential of the array: [2.71828183e+00 5.45981500e+01 8.10308393e+03 8.88611052e+06
+ 7.20048993e+10]
+~~~
+
+> **_NOTE_** A NumPy array arr containing square numbers is created. Then, logarithm, square root, and exponentiation operations are applied to the array using NumPy functions np.log(), np.sqrt(), and np.exp() respectively. The results are printed, demonstrating how these operations can be directly applied to ndarrays without the need for explicit iteration.
+
+<ul>
+  <li>The operations explained for 1-D arrays function similarly when applied to arrays with higher dimensions.</li>
+  <li>Below are a few examples involving matrices.</li>
+  <li>Important ndarray functions:</li>
+  <ol tyep="1">
+    <li><b>np.dot(array_1, array_2): </b> Computes the dot product between two arrays.</li>
+    <li><b>array_1 * array_2:  </b> Returns an array where each element of the first array is multiplied with the corresponding element of the second array.</li>
+    <li><b>array.T:  </b>  Returns the transpose of the array.</li>
+    <li><b>np.matmul(array_1, array_2):  </b> Computes the matrix product of two arrays.</li>
+  </ol>
+  <li><b>Note: </b> 2-D arrays can be indexed similarly to lists (array[i][j]). However, they can also be indexed as array[i, j]. This indexing method applies to higher-dimensional arrays as well.</li>
+</ul>
+
+~~~
+import numpy as np
+
+# Create two 2-D arrays
+array_1 = np.array([[1, 2], [3, 4]])
+array_2 = np.array([[5, 6], [7, 8]])
+
+# Compute the dot product of the arrays
+dot_product = np.dot(array_1, array_2)
+
+# Element-wise multiplication of the arrays
+element_wise_product = array_1 * array_2
+
+# Transpose of array_1
+transposed_array_1 = array_1.T
+
+# Matrix multiplication of the arrays
+matrix_product = np.matmul(array_1, array_2)
+
+# Print the results
+print("Dot product of the arrays:")
+print(dot_product)
+print("\nElement-wise product of the arrays:")
+print(element_wise_product)
+print("\nTranspose of array_1:")
+print(transposed_array_1)
+print("\nMatrix product of the arrays:")
+print(matrix_product)
+~~~
+___
+~~~
+Dot product of the arrays:
+[[19 22]
+ [43 50]]
+
+Element-wise product of the arrays:
+[[ 5 12]
+ [21 32]]
+
+Transpose of array_1:
+[[1 3]
+ [2 4]]
+
+Matrix product of the arrays:
+[[19 22]
+ [43 50]]
+~~~
+
+> **_NOTE_** two 2-D arrays array_1 and array_2 are created. The dot product, element-wise product, transpose of array_1, and matrix product of the arrays are computed using the provided NumPy functions. The results showcase the application of these functions on arrays of higher dimensions.
+
+<ul>
+  <li>NumPy provides functions to generate arrays filled with zeros or ones using <b>np.zeros(shape)</b> and <b>np.ones(shape)</b> respectively.</li>
+</ul>
+
+~~~
+import numpy as np
+
+# Create a 2x3 array filled with zeros
+zeros_array = np.zeros((2, 3))
+
+# Create a 3x2 array filled with ones
+ones_array = np.ones((3, 2))
+
+# Print the arrays
+print("Zeros array:")
+print(zeros_array)
+print("\nOnes array:")
+print(ones_array)
+~~~
+___
+~~~
+Zeros array:
+[[0. 0. 0.]
+ [0. 0. 0.]]
+
+Ones array:
+[[1. 1.]
+ [1. 1.]
+ [1. 1.]]
+~~~
+
+> **_NOTE_** The np.zeros() and np.ones() functions are used to create arrays filled with zeros and ones respectively. The shape of the arrays is specified as a tuple argument. Finally, the arrays are printed to showcase their content.
+
+<ul>
+  <li>NumPy includes a module named Random, which facilitates working with random numbers and data distributions.</li>
+  <li>This module is particularly valuable for generating data.</li>
+  <li>Key functions from the Random module:</li>
+  <ol>
+    <li><b>random.randint(upper_limit): </b> Generates a random integer between 0 and the specified upper limit.</li>
+    <li><b>random.rand(): </b> Generates a random float between 0 and 1.</li>
+    <li><b>random.choice(array): </b> Selects a value randomly from the provided 1-D array.</li>
+  </ol>
+  <li><b>Note: </b> These functions can also accept an argument specifying the size of the array to be returned.</li>
+</ul>
+
+~~~
+import numpy as np
+
+# Generate a random integer between 0 and 9
+random_int = np.random.randint(10)
+print("Random integer between 0 and 9:", random_int)
+
+# Generate a random float between 0 and 1
+random_float = np.random.rand()
+print("Random float between 0 and 1:", random_float)
+
+# Generate a random choice from a provided 1-D array
+array = np.array([1, 2, 3, 4, 5])
+random_choice = np.random.choice(array)
+print("Random choice from the array:", random_choice)
+~~~
+___
+~~~
+Random integer between 0 and 9: 0
+Random float between 0 and 1: 0.8258953159664709
+Random choice from the array: 1
+~~~
+
+> **_NOTE_** The functions np.random.randint(), np.random.rand(), and np.random.choice() from the NumPy Random module are demonstrated. Each function generates random numbers or selects random values from an array, showcasing their utility for generating random data.
+
+##### Pandas
+
+<ul>
+  <li>Pandas is a Python library used for handling datasets.</li>
+  <li>It offers essential functions for analyzing, cleaning, exploring, manipulating, and <b>visualizing</b> data.</li>
+  <li>Given that optimization problems often involve large datasets, Pandas is highly relevant for this course.</li>
+</ul>
+
+~~~
+import pandas as pd
+
+# Create a sample DataFrame
+data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+        'Age': [25, 30, 35, 40],
+        'Salary': [50000, 60000, 70000, 80000]}
+df = pd.DataFrame(data)
+
+# Print the DataFrame
+print("Sample DataFrame:")
+print(df)
+~~~
+___
+~~~
+Sample DataFrame:
+      Name  Age  Salary
+0    Alice   25   50000
+1      Bob   30   60000
+2  Charlie   35   70000
+3    David   40   80000
+~~~
+
+> **_NOTE_** Pandas is used to create a sample DataFrame named df containing information about individuals. The DataFrame is then printed to showcase how Pandas can be used to handle and analyze tabular data.
+> **_NOTE_** This result displays the created DataFrame containing information about individuals, such as their names, ages, and salaries. It demonstrates how Pandas can be used to handle and analyze tabular data effectively.
+
+<ul>
+  <li>To install Pandas, use the command <b>pip install pandas</b> in the terminal. Then, import it into the .py file using <b>import pandas.</b> Note: In Google Colab, Pandas is pre-installed, so only importing is necessary.</li>
+  <li>Pandas utilizes Series to represent the columns of a table. Series can be formed from either a one-dimensional list or key-value pairs. They are created using the <b>pd.Series(list or dict)</b> function. The <b>index</b> argument in <b>pd.Series()</b> specifies the row labels, with the length of the index list matching the number of rows in the provided columns.</li>
+</ul>
+
+~~~
+import pandas as pd
+
+# Create a Series from a one-dimensional list
+list_series = pd.Series([10, 20, 30, 40])
+
+# Create a Series from key-value pairs
+dict_series = pd.Series({'A': 100, 'B': 200, 'C': 300, 'D': 400})
+
+# Print the Series
+print("Series created from a one-dimensional list:")
+print(list_series)
+print("\nSeries created from key-value pairs:")
+print(dict_series)
+~~~
+___
+~~~
+Series created from a one-dimensional list:
+0    10
+1    20
+2    30
+3    40
+dtype: int64
+
+Series created from key-value pairs:
+A    100
+B    200
+C    300
+D    400
+dtype: int64
+~~~
+
+> **_NOTE_** Pandas Series are created using both a one-dimensional list and key-value pairs. The resulting Series are then printed to demonstrate how Series can be created and represented in Pandas.
+> **_NOTE_** This result displays the Series created from both a one-dimensional list and key-value pairs. It showcases the structure of Series in Pandas, where index labels are automatically assigned to the elements.
+
+<ul>
+  <li>When creating Series from dictionaries (key/value pairs), the index argument is unnecessary since the dictionary keys already serve as labels.</li>
+  <li>Dataframes in Pandas represent tables with rows and columns. They are constructed using the <b>pd.DataFrame()</b> function. This function also includes an index attribute for assigning row labels.</li>
+</ul>
+
+~~~
+import pandas as pd
+
+# Create a Series from key-value pairs without specifying the index
+dict_series = pd.Series({'A': 100, 'B': 200, 'C': 300, 'D': 400})
+
+# Create a DataFrame from a dictionary of lists
+data = {'Name': ['Alice', 'Bob', 'Charlie'],
+        'Age': [25, 30, 35],
+        'Salary': [50000, 60000, 70000]}
+df = pd.DataFrame(data)
+
+# Print the Series and DataFrame
+print("Series created from key-value pairs (dictionary):")
+print(dict_series)
+print("\nDataFrame created from a dictionary of lists:")
+print(df)
+~~~
+___
+~~~
+Series created from key-value pairs (dictionary):
+A    100
+B    200
+C    300
+D    400
+dtype: int64
+
+DataFrame created from a dictionary of lists:
+      Name  Age  Salary
+0    Alice   25   50000
+1      Bob   30   60000
+2  Charlie   35   70000
+~~~
+
+> **_NOTE_** A Series is created from key-value pairs without specifying the index since the keys already serve as labels. Additionally, a DataFrame is created from a dictionary of lists using the pd.DataFrame() function. The resulting Series and DataFrame are then printed to showcase their structure and content.
+
+> **_NOTE_** This result displays the Series created from key-value pairs (dictionary) and the DataFrame created from a dictionary of lists. It illustrates the structure and content of both Series and DataFrames in Pandas.
+
+<ul>
+  <li>DataFrame rows can be accessed using the <b>data_Frame.loc[row_Index]</b> attribute. If row labels are used, the row name can alternatively be utilized instead of the index.</li>
+  <li>DataFrame columns can be accessed by specifying the column name within square brackets or by passing a list of column names if multiple columns are required <b>(e.g., data_Frame[["col_1", "col_2"]]).</b></li>
+</ul>
+
+~~~
+import pandas as pd
+
+# Create a DataFrame
+data = {'Name': ['Alice', 'Bob', 'Charlie'],
+        'Age': [25, 30, 35],
+        'Salary': [50000, 60000, 70000]}
+df = pd.DataFrame(data)
+
+# Access a specific row by index
+row_index_1 = df.loc[1]
+print("Accessing row by index:")
+print(row_index_1)
+
+# Access a specific row by label
+row_label_Alice = df.loc['Alice']
+print("\nAccessing row by label:")
+print(row_label_Alice)
+
+# Access a specific column
+column_age = df['Age']
+print("\nAccessing a specific column:")
+print(column_age)
+
+# Accessing multiple columns
+columns_name_salary = df[['Name', 'Salary']]
+print("\nAccessing multiple columns:")
+print(columns_name_salary)
+~~~
+___
+~~~
+Accessing row by index:
+Name      Bob
+Age        30
+Salary  60000
+Name: 1, dtype: object
+
+Accessing row by label:
+Name      Alice
+Age          25
+Salary    50000
+Name: Alice, dtype: object
+
+Accessing a specific column:
+0    25
+1    30
+2    35
+Name: Age, dtype: int64
+
+Accessing multiple columns:
+      Name  Salary
+0    Alice   50000
+1      Bob   60000
+2  Charlie   70000
+~~~
+
+> **_NOTE_** A DataFrame is created using a dictionary. It then demonstrates accessing specific rows by both index and label, accessing a single column, and accessing multiple columns. Each operation showcases different methods of accessing rows and columns in a DataFrame.
+> **_NOTE_** This result demonstrates accessing specific rows and columns in a DataFrame. It includes accessing rows by both index and label, accessing a single column, and accessing multiple columns. Each operation showcases different methods of accessing data in a DataFrame using Pandas.
+
+<ul>
+  <li>Rows in a DataFrame can be filtered based on column values using comparison operators.</li>
+  <li>By accessing the first element of the shape attribute of the filtered DataFrame, you can determine the number of rows that meet the specified condition.</li>
+</ul>
+
+~~~
+import pandas as pd
+
+# Create a DataFrame
+data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+        'Age': [25, 30, 35, 40],
+        'Salary': [50000, 60000, 70000, 80000]}
+df = pd.DataFrame(data)
+
+# Filter rows where Age is greater than 30
+filtered_df = df[df['Age'] > 30]
+
+# Get the number of rows that satisfy the condition
+num_rows_satisfy_condition = filtered_df.shape[0]
+
+# Print the filtered DataFrame and the number of rows
+print("Filtered DataFrame:")
+print(filtered_df)
+print("\nNumber of rows where Age is greater than 30:", num_rows_satisfy_condition)
+~~~
+___
+~~~
+Filtered DataFrame:
+      Name  Age  Salary
+2  Charlie   35   70000
+3    David   40   80000
+
+Number of rows where Age is greater than 30: 2
+~~~
+
+> **_NOTE_** a DataFrame is created, and then rows are filtered based on the condition where the Age column is greater than 30. The filtered DataFrame and the number of rows that satisfy the condition are then printed. This demonstrates how to filter rows in a DataFrame based on column values using Pandas.
+
+<ul>
+  <li>ou can import datasets using the <b>pandas.read_csv()</b> function.</li>
+</ul>
+
+~~~
+import pandas as pd
+
+# Import a CSV file as a DataFrame
+df = pd.read_csv('example.csv')
+
+# Print the DataFrame
+print("Imported DataFrame:")
+print(df)
+~~~
+___
+~~~
+Imported DataFrame:
+   Column1  Column2  Column3
+0        1        4        7
+1        2        5        8
+2        3        6        9
+~~~
+
+> **_NOTE_** A CSV file named 'example.csv' is imported as a DataFrame using the pd.read_csv() function. The resulting DataFrame is then printed to display the imported dataset. This demonstrates how to import datasets from CSV files using Pandas.
+
+<ul>
+  <li>You can use the head(n) and tail(n) functions to display the first and last n rows of a DataFrame. If no argument is provided, 5 rows will be shown by default.</li>
+</ul>
+
+~~~
+import pandas as pd
+
+# Create a DataFrame
+data = {'Column1': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        'Column2': ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']}
+df = pd.DataFrame(data)
+
+# Display the first 3 rows using head(n)
+print("First 3 rows:")
+print(df.head(3))
+
+# Display the last 3 rows using tail(n)
+print("\nLast 3 rows:")
+print(df.tail(3))
+~~~
+___
+~~~
+First 3 rows:
+   Column1 Column2
+0        1       A
+1        2       B
+2        3       C
+
+Last 3 rows:
+   Column1 Column2
+7        8       H
+8        9       I
+9       10       J
+~~~
+
+> **_NOTE_** a DataFrame is created, and then the first 3 rows and last 3 rows are displayed using the head(n) and tail(n) functions, respectively. This demonstrates how to view specific rows of a DataFrame using Pandas.
 
 ## Usage & Contributing
 
