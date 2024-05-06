@@ -29,6 +29,11 @@
       - [Function Arguments and Default Values](#function-arguments-and-default-values)
       - [NumPy](#numpy)
       - [Pandas](#pandas)
+  - [Chapter 3](#chapter-3)
+    - [Introduction to Gurobi](#introduction-to-gurobi)
+    - [Installation](#installation)
+    - [Simple Gurobi Example](#simple-gurobi-example)
+    - [Data Preparation and Further Gurobi Examples in PyCharm](#data-preparation-and-further-gurobi-examples-in-pycharm)
 - [Usage & Contributing](#usage--contributing)
 - [License](#license)
 - [Resources](#resources)
@@ -1170,6 +1175,36 @@ Last 3 rows:
 ~~~
 
 > **_NOTE_** a DataFrame is created, and then the first 3 rows and last 3 rows are displayed using the head(n) and tail(n) functions, respectively. This demonstrates how to view specific rows of a DataFrame using Pandas.
+
+## Chapter 3
+
+<p><a href="https://github.com/kaleliguray/Scheduling-Manufacturing-Systems-Working-Environment/tree/main/lecture_3">In the Lecture 3 folder,</a> you'll find detailed explanations, coding examples, and output.</p>
+
+> **_NOTE_** During the lecture period, this Python Lecture which I have benefited was created by Daniel Postica and Mirko Schömig 
+    <ul>
+      <li><a href="https://www.ot.mgt.tum.de/scm/home/">Chair of Production and Supply Chain Management (Grunow)</a></li>
+      <li>School of Management, Technical University of Munich</li>
+    </ul>
+
+### Introduction to Gurobi
+
+<div>
+  <ul>
+  <li>Download Python at: https://www.python.org/downloads/</li>
+  <li>Download PyCharm at: https://www.jetbrains.com/pycharm/download (Scroll down for community edition)</li>
+  <li>Create an account at: https://www.gurobi.com</li>
+  <li>After creating the account go to: https://www.gurobi.com/academia/academic-program-and-licenses/ and select Academic Named-User License.</li>
+  <li>On the next page the installation instructions are displayed.</li>
+</ul>
+</div>
+
+![Screen Shot 2024-05-06 at 21 50 37 PM](https://github.com/kaleliguray/Scheduling-Manufacturing-Systems-Working-Environment/assets/55591718/8ce8ee8e-fb65-4141-bc42-0ab50c390c29)
+
+### Simple Gurobi Example
+
+<p><a href="https://github.com/kaleliguray/Scheduling-Manufacturing-Systems-Working-Environment/blob/main/lecture_3/Lecture_3_Code_Along.ipynb">Please visit the lecture 3 folder!</a></p>
+
+### Data Preparation and Further Gurobi Examples in PyCharm
 
 ## Usage & Contributing
 
