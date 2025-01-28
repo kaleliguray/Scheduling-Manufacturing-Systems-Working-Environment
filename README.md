@@ -1,6 +1,3 @@
-
-![Image]('/Users/giraykaleli/Desktop/Screen Shot 2025-01-29 at 00.06.14 AM.png')
-
 # 📚 Scheduling Manufacturing Systems 📚
 
 * <p>First of all, this repository is about the lecture that was given during my master's education at Munich Technical University.</p>
